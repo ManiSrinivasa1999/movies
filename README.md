@@ -1,5 +1,7 @@
 # movies-list
 
+## Live at : https://mani-movies.netlify.app/
+
 ## Build Setup
 
 ```bash
