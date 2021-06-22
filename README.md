@@ -2,6 +2,9 @@
 
 ## Live at : https://mani-movies.netlify.app/
 
+## Demo : https://www.loom.com/share/836bd988930c4270b0bafe03745f7bf4
+
+
 ## Build Setup
 
 ```bash

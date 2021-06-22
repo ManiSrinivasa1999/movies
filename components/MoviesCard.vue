@@ -1,29 +1,19 @@
 <template>
   <div>
-    <div class="bg-gray-100 py-2 flex flex-col justify-center">
-      <div class="py-3 sm:max-w-xl sm:mx-auto">
-        <div
-          class="
-            bg-white
-            shadow-lg
-            border-gray-100 border
-            sm:rounded-3xl
-            p-8
-            flex
-            space-x-8
-          "
-        >
+    <div class="flex flex-col justify-center py-2 mx-4 bg-gray-100">
+      <div class="w-full py-3 sm:mx-auto">
+        <div class="flex p-8 space-x-8 card">
           <div class="w-1/2">
             <img
-              class="rounded-3xl shadow-lg object-fill"
+              class="object-fill shadow-lg rounded-3xl"
               :src="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
-              alt=""
+              :alt="movie.name"
             />
           </div>
           <div class="flex flex-col w-1/2 space-y-4">
-            <div class="flex justify-between items-start">
+            <div class="flex items-start justify-between">
               <h2 class="text-3xl font-bold">{{ movie.title }}</h2>
-              <div class="bg-yellow-400 font-bold rounded-xl p-2">
+              <div class="p-2 font-bold bg-yellow-400 rounded-xl">
                 {{ movie.vote_average }}
               </div>
             </div>
@@ -39,7 +29,7 @@
                 {{ formatDate(movie.release_date) }}
               </div>
             </div>
-            <p class="text-gray-400 max-h-28 overflow-y-hidden">
+            <p class="overflow-y-hidden text-gray-400 line-clamp-6">
               {{ movie.overview }}
             </p>
           </div>
@@ -67,3 +57,8 @@ export default {
   },
 }
 </script>
+<style>
+.card {
+  @apply bg-white border border-gray-100 shadow-lg rounded-3xl;
+}
+</style>
